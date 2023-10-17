@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="dist/output.css">
 </head>
 
-<body>
-    <header>
-        <div class="points flex justify-between px-32 py-16">
+<body class="px-4 md:px-0">
+    <header class="mt-8 md:mt-0">
+        <div class="points flex justify-between flex-col md:flex-row md:px-32 md:py-16">
             <div class="p1 health">
                 <div class="badge badge-neutral mr-4">Player 1 (<span>100</span>)</div>
                 <progress class="progress w-56" value="100" max="100"></progress>
@@ -22,10 +22,10 @@
             </div>
         </div>
     </header>
-    <main class="flex justify-center  mt-32">
-        <div class="arena flex items-center gap-16">
-            <div class="p1 arena-box">
-                <div class="card border-2 w-96 bg-base-100 shadow-xl">
+    <main class="flex justify-center my-8 my:mb-0 md:mt-32 w-full">
+        <div class="arena flex flex-col md:flex-row items-center gap-y-4 gap-x-16 w-full md:justify-center">
+            <div class="p1 arena-box md:w-auto w-full">
+                <div class="card border-2 md:w-96 bg-base-100 shadow-xl">
                     <div class="card-body">
                         <h2 class="card-title">
                             <div class="badge badge-secondary">Player 1</div>
@@ -34,8 +34,8 @@
                     </div>
                 </div>
             </div>
-            <div class="cpu arena-box">
-                <div class="card border-2 w-96 bg-base-100 shadow-xl">
+            <div class="cpu arena-box md:w-auto w-full">
+                <div class="card border-2 md:w-96 bg-base-100 shadow-xl">
                     <div class="card-body">
                         <h2 class="card-title">
                             <div class="badge badge-secondary">Mr. CPU</div>
@@ -47,7 +47,7 @@
         </div>
     </main>
     <footer>
-        <div class="input-section flex justify-center py-40 gap-8">
+        <div class="input-section md:flex md:grid-cols-none grid grid-cols-2 justify-center md:py-40 gap-8">
             <button class="btn punch btn-error" data-move="p">Punch</button>
             <button class="btn lpunch btn-error" data-move="lp">Lower Punch</button>
             <button class="btn pblock btn-success" data-move="b">Block</button>
