@@ -13,11 +13,11 @@
     <header>
         <div class="points flex justify-between px-32 py-16">
             <div class="p1 health">
-                <div class="badge badge-neutral mr-4">Player 1</div>
+                <div class="badge badge-neutral mr-4">Player 1 (<span>100</span>)</div>
                 <progress class="progress w-56" value="100" max="100"></progress>
             </div>
             <div class="p2 health">
-                <div class="badge badge-neutral mr-4">Mr CPU</div>
+                <div class="badge badge-neutral mr-4">Mr CPU (<span>100</span>)</div>
                 <progress class="progress w-56" value="100" max="100"></progress>
             </div>
         </div>
@@ -30,7 +30,7 @@
                         <h2 class="card-title">
                             <div class="badge badge-secondary">Player 1</div>
                         </h2>
-                        <p>Player 1 is ready to Bang!</p>
+                        <p id="p1status">Player 1 is ready to Bang!</p>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                         <h2 class="card-title">
                             <div class="badge badge-secondary">Mr. CPU</div>
                         </h2>
-                        <p>Reigning defending champion Mr CPU!</p>
+                        <p id="cpustatus">Reigning defending champion Mr CPU!</p>
                     </div>
                 </div>
             </div>
@@ -48,10 +48,10 @@
     </main>
     <footer>
         <div class="input-section flex justify-center py-40 gap-8">
-            <button class="btn punch btn-error">Punch</button>
-            <button class="btn lpunch btn-error">Lower Punch</button>
-            <button class="btn pblock btn-success">Block</button>
-            <button class="btn lblock btn-success">Lower Block</button>
+            <button class="btn punch btn-error" data-move="p">Punch</button>
+            <button class="btn lpunch btn-error" data-move="lp">Lower Punch</button>
+            <button class="btn pblock btn-success" data-move="b">Block</button>
+            <button class="btn lblock btn-success" data-move="lb">Lower Block</button>
         </div>
     </footer>
 </body>

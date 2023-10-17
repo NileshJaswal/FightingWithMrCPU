@@ -1413,24 +1413,16 @@ html {
   margin-top: 8rem;
 }
 
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
 }
 
-.h-screen {
-  height: 100vh;
+.w-56 {
+  width: 14rem;
 }
 
 .w-96 {
   width: 24rem;
-}
-
-.w-56 {
-  width: 14rem;
 }
 
 .items-center {
@@ -1445,12 +1437,12 @@ html {
   justify-content: space-between;
 }
 
-.gap-8 {
-  gap: 2rem;
-}
-
 .gap-16 {
   gap: 4rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .border-2 {
@@ -1470,11 +1462,6 @@ html {
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-
-.py-64 {
-  padding-top: 16rem;
-  padding-bottom: 16rem;
 }
 
 .py-40 {
