@@ -1413,6 +1413,10 @@ html {
   margin-top: 8rem;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
