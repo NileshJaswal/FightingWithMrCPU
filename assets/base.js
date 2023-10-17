@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+    const playagain = () => {
+        window.location.reload();
+    }
+
+    document.querySelectorAll('.modal .modal-action .btn')[0].addEventListener('click', function (){
+        playagain();
+    });
     //Health Intialize
     let p1_hp = 100;
     let cpu_hp = 100;
@@ -112,7 +120,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelectorAll('.points .p1 .progress')[0].setAttribute("value", p1_hp);
             }
 
-
+            if (p1_hp <= 0) {
+                document.querySelectorAll('.modal h3')[0].innerHTML = "Sorry!"
+                document.querySelectorAll('.modal p')[0].innerHTML = "Mr CPU Won"
+                result_modal.showModal()
+            } else if(cpu_hp <= 0) {
+                document.querySelectorAll('.modal h3')[0].innerHTML = "Yea!"
+                document.querySelectorAll('.modal p')[0].innerHTML = "You Won"
+                result_modal.showModal()
+            }
         });
     }
 })
