@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let movesbtns = document.querySelectorAll('.input-section .btn');
     for (i of movesbtns) {
         i.addEventListener('click', function () {
-            let cpuI = Math.random() * 4;
+            let cpuI = Math.random() * 5;
             cpuI = Math.floor(cpuI);
-            let cpu = ["p", "lp", "b", "lb"][cpuI];
+            let cpu = ["p", "lp", "b", "lb", "c"][cpuI];
 
             clicked_move = this.getAttribute('data-move');
             usermove = clicked_move;
@@ -94,6 +94,22 @@ document.addEventListener("DOMContentLoaded", () => {
             else if (usermove === 'lb' && cpu === 'b') {
                 document.getElementById('p1status').innerHTML = 'Player 1 Used Lower Block';
                 document.getElementById('cpustatus').innerHTML = 'CPU 1 Used Block';
+            }
+
+            else if (usermove === 'p' && cpu === 'c') {
+                document.getElementById('p1status').innerHTML = 'Player 1 Used Punch';
+                document.getElementById('cpustatus').innerHTML = 'CPU 1 Used Super Special Counter';
+                p1_hp = p1_hp - 30;
+                document.querySelectorAll('.points .p1 span')[0].innerHTML = p1_hp;
+                document.querySelectorAll('.points .p1 .progress')[0].setAttribute("value", p1_hp);
+            }
+
+            else if (usermove === 'lp' && cpu === 'c') {
+                document.getElementById('p1status').innerHTML = 'Player 1 Used Lower Punch';
+                document.getElementById('cpustatus').innerHTML = 'CPU 1 Used Super Special Counter';
+                p1_hp = p1_hp - 30;
+                document.querySelectorAll('.points .p1 span')[0].innerHTML = p1_hp;
+                document.querySelectorAll('.points .p1 .progress')[0].setAttribute("value", p1_hp);
             }
 
 
