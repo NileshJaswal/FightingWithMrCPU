@@ -11,14 +11,21 @@
 
 <body>
     <header>
-        <div class="points">
-
+        <div class="points flex justify-between px-32 py-16">
+            <div class="p1 health">
+                <div class="badge badge-neutral mr-4">Player 1</div>
+                <progress class="progress w-56" value="100" max="100"></progress>
+            </div>
+            <div class="p2 health">
+                <div class="badge badge-neutral mr-4">Mr CPU</div>
+                <progress class="progress w-56" value="100" max="100"></progress>
+            </div>
         </div>
     </header>
-    <main class="flex justify-center">
-        <div class="arena flex items-center h-screen">
+    <main class="flex justify-center  mt-32">
+        <div class="arena flex items-center gap-16">
             <div class="p1 arena-box">
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card border-2 w-96 bg-base-100 shadow-xl">
                     <div class="card-body">
                         <h2 class="card-title">
                             <div class="badge badge-secondary">Player 1</div>
@@ -28,7 +35,7 @@
                 </div>
             </div>
             <div class="cpu arena-box">
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card border-2 w-96 bg-base-100 shadow-xl">
                     <div class="card-body">
                         <h2 class="card-title">
                             <div class="badge badge-secondary">Mr. CPU</div>
@@ -39,6 +46,14 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div class="input-section flex justify-center py-40 gap-8">
+            <button class="btn btn-error">Punch</button>
+            <button class="btn btn-error">Lower Punch</button>
+            <button class="btn btn-success">Block</button>
+            <button class="btn btn-success">Lower Block</button>
+        </div>
+    </footer>
 </body>
 <script src="assets/base.js"></script>
 
